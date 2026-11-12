@@ -24,55 +24,55 @@
 <text x="600" y="162" class="n" >判官</text>
 <text x="880" y="162" class="n" >事件与归档</text>
 <rect x="60" y="200" width="200" height="120" rx="14" fill="#ddf4ff" stroke="#1f6feb" stroke-width="2"/>
-<text x="86" y="242" class="title" >turn/end</text>
-<text x="86" y="278" class="s" >一轮结束</text>
-<text x="86" y="308" class="s" >只取 human 输入</text>
+<text x="86" y="238" class="title" >turn/end</text>
+<text x="86" y="272" class="s" >一轮结束</text>
+<text x="86" y="300" class="s" >只取 human 输入</text>
 <rect x="320" y="200" width="220" height="120" rx="14" fill="#f6f8fa" stroke="#d0d7de" stroke-width="2"/>
-<text x="346" y="242" class="title" >pending 缓冲</text>
-<text x="346" y="278" class="s" >追加本轮</text>
-<text x="346" y="308" class="s" >立即落盘</text>
+<text x="346" y="238" class="title" >pending 缓冲</text>
+<text x="346" y="272" class="s" >追加本轮</text>
+<text x="346" y="300" class="s" >立即落盘</text>
 <rect x="600" y="200" width="220" height="120" rx="14" fill="#fff8c5" stroke="#9a6700" stroke-width="2"/>
-<text x="626" y="242" class="title" >判官：结束？</text>
-<text x="626" y="278" class="s" >后台队列</text>
-<text x="626" y="308" class="s" >失败保留缓冲</text>
+<text x="626" y="238" class="title" >判官：结束？</text>
+<text x="626" y="272" class="s" >后台队列</text>
+<text x="626" y="300" class="s" >失败保留缓冲</text>
 <rect x="880" y="200" width="200" height="120" rx="14" fill="#dafbe1" stroke="#1a7f37" stroke-width="2"/>
-<text x="906" y="242" class="title" >事件</text>
-<text x="906" y="278" class="s" >摘要 + 重要度</text>
-<text x="906" y="308" class="s" >计数 +1</text>
+<text x="906" y="238" class="title" >事件</text>
+<text x="906" y="272" class="s" >摘要 + 重要度</text>
+<text x="906" y="300" class="s" >计数 +1</text>
 <rect x="1140" y="200" width="240" height="120" rx="14" fill="#dafbe1" stroke="#1a7f37" stroke-width="2"/>
-<text x="1166" y="242" class="title" >归纳 / 晋升</text>
-<text x="1166" y="278" class="s" >每 inductEvery 条事件</text>
-<text x="1166" y="308" class="s" >群聊：满足条件时晋升</text>
+<text x="1166" y="238" class="title" >归纳 / 晋升</text>
+<text x="1166" y="272" class="s" >每 inductEvery 条事件</text>
+<text x="1166" y="300" class="s" >群聊：满足条件时晋升</text>
 <path d="M 260 260 L 310 260" class="arr"/>
 <path d="M 540 260 L 590 260" class="arr"/>
 <path d="M 820 260 L 870 260" class="arr"/>
 <path d="M 1080 260 L 1130 260" class="arr"/>
-<text x="818" y="184" class="n" >写事件</text>
-<text x="1082" y="184" class="n" >每 N 条</text>
-<rect x="320" y="420" width="220" height="110" rx="14" fill="#f6f8fa" stroke="#d0d7de" stroke-width="2"/>
-<text x="346" y="462" class="title" >continue</text>
-<text x="346" y="498" class="s" >继续缓冲</text>
-<text x="346" y="528" class="s" >下一轮再判</text>
-<rect x="600" y="420" width="220" height="110" rx="14" fill="#f6f8fa" stroke="#d0d7de" stroke-width="2"/>
-<text x="626" y="462" class="title" >close · 不值得</text>
-<text x="626" y="498" class="s" >丢弃缓冲</text>
-<text x="626" y="528" class="s" >不写半成品事件</text>
-<rect x="880" y="420" width="200" height="110" rx="14" fill="#ffeff7" stroke="#bf3989" stroke-width="2"/>
-<text x="906" y="462" class="title" >活跃 ≤ 400</text>
-<text x="906" y="498" class="s" >溢出的事件</text>
-<rect x="1140" y="420" width="240" height="110" rx="14" fill="#ffeff7" stroke="#bf3989" stroke-width="2"/>
-<text x="1166" y="462" class="title" >archive.jsonl</text>
-<text x="1166" y="498" class="s" >append-only</text>
-<text x="1166" y="528" class="s" >recall 可检索</text>
-<path d="M 600 292 L 570 292 L 570 475 L 540 475" class="arr"/>
+<text x="850" y="238" class="n" text-anchor="middle">写事件</text>
+<text x="1110" y="238" class="n" text-anchor="middle">每N条</text>
+<rect x="320" y="420" width="220" height="120" rx="14" fill="#f6f8fa" stroke="#d0d7de" stroke-width="2"/>
+<text x="346" y="458" class="title" >continue</text>
+<text x="346" y="492" class="s" >继续缓冲</text>
+<text x="346" y="520" class="s" >下一轮再判</text>
+<rect x="600" y="420" width="220" height="120" rx="14" fill="#f6f8fa" stroke="#d0d7de" stroke-width="2"/>
+<text x="626" y="458" class="title" >close · 不值得</text>
+<text x="626" y="492" class="s" >丢弃缓冲</text>
+<text x="626" y="520" class="s" >不写半成品事件</text>
+<rect x="880" y="420" width="200" height="120" rx="14" fill="#ffeff7" stroke="#bf3989" stroke-width="2"/>
+<text x="906" y="458" class="title" >活跃 ≤ 400</text>
+<text x="906" y="492" class="s" >溢出的事件</text>
+<rect x="1140" y="420" width="240" height="120" rx="14" fill="#ffeff7" stroke="#bf3989" stroke-width="2"/>
+<text x="1166" y="458" class="title" >archive.jsonl</text>
+<text x="1166" y="492" class="s" >append-only</text>
+<text x="1166" y="520" class="s" >recall 可检索</text>
+<path d="M 600 292 L 570 292 L 570 480 L 540 480" class="arr"/>
 <path d="M 400 420 L 400 320" class="arr"/>
-<path d="M 710 320 L 710 410" class="arr"/>
-<path d="M 980 320 L 980 410" class="arr"/>
-<path d="M 1080 475 L 1130 475" class="arr"/>
-<text x="1092" y="457" class="n" >归档</text>
-<rect x="60" y="620" width="1440" height="120" rx="14" fill="#f6f8fa" stroke="#d0d7de" stroke-width="2" stroke-dasharray="7 6"/>
-<text x="86" y="662" class="title" >失败与队列边界</text>
-<text x="86" y="698" class="s" >判官失败：保留缓冲，下一轮再判；不写半成品事件。</text>
-<text x="86" y="728" class="s" >归档失败：保留在活跃列表；模型调用在后台队列，不阻塞回复。</text>
+<path d="M 710 320 L 710 420" class="arr"/>
+<path d="M 980 320 L 980 420" class="arr"/>
+<path d="M 1080 480 L 1130 480" class="arr"/>
+<text x="1110" y="462" class="n" text-anchor="middle">归档</text>
+<rect x="60" y="620" width="1440" height="140" rx="14" fill="#f6f8fa" stroke="#d0d7de" stroke-width="2" stroke-dasharray="7 6"/>
+<text x="86" y="658" class="title" >失败与队列边界</text>
+<text x="86" y="692" class="s" >判官失败：保留缓冲，下一轮再判；不写半成品事件。</text>
+<text x="86" y="720" class="s" >归档失败：保留在活跃列表；模型调用在后台队列，不阻塞回复。</text>
 <text x="60" y="832" class="n" >群聊先按焦点分轨：active 走本图，buffer 只记事件，第 11 人起只进群氛围。</text>
 </svg>

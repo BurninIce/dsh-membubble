@@ -1,6 +1,6 @@
 {
   "name": "dsh-membubble",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Bounded-context memory for long-running dsh conversations and large group chats: fixed injection budget, focus-limited person pipelines, append-only event archives.",
   "type": "module",
   "license": "MIT",

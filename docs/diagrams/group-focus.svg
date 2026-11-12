@@ -21,45 +21,45 @@
   <text x="60" y="72" class="h" >大群路径：焦点决定谁进个人管线</text>
 <text x="60" y="108" class="sub" >群人数只影响名册查找；注入与判官调用由焦点上限决定。</text>
 <rect x="60" y="170" width="220" height="120" rx="14" fill="#ddf4ff" stroke="#1f6feb" stroke-width="2"/>
-<text x="86" y="212" class="title" >群消息</text>
-<text x="86" y="248" class="s" >1000 个说话人</text>
-<text x="86" y="278" class="s" >也可以</text>
+<text x="86" y="208" class="title" >群消息</text>
+<text x="86" y="242" class="s" >1000 个说话人</text>
+<text x="86" y="270" class="s" >也可以</text>
 <rect x="360" y="170" width="240" height="120" rx="14" fill="#f6f8fa" stroke="#d0d7de" stroke-width="2"/>
-<text x="386" y="212" class="title" >噪音过滤</text>
-<text x="386" y="248" class="s" >草 / 6666 / 表情 / 复读</text>
-<text x="386" y="278" class="s" >直接 @ 或点名放行</text>
+<text x="386" y="208" class="title" >噪音过滤</text>
+<text x="386" y="242" class="s" >草 / 6666 / 表情 / 复读</text>
+<text x="386" y="270" class="s" >直接 @ 或点名放行</text>
 <rect x="660" y="160" width="340" height="140" rx="14" fill="#fff8c5" stroke="#9a6700" stroke-width="2"/>
-<text x="686" y="202" class="title" >焦点板</text>
-<text x="686" y="238" class="s" >最近 60 条 · 6 小时</text>
-<text x="686" y="268" class="s" >加权 importance + 发言轮数</text>
+<text x="686" y="198" class="title" >焦点板</text>
+<text x="686" y="232" class="s" >最近 60 条 · 6 小时</text>
+<text x="686" y="260" class="s" >加权 importance + 发言轮数</text>
 <path d="M 280 230 L 350 230" class="arr"/>
 <path d="M 600 230 L 650 230" class="arr"/>
 <path d="M 830 300 L 830 330 L 270 330 L 270 390" class="arr"/>
 <path d="M 830 300 L 830 350 L 690 350 L 690 390" class="arr"/>
 <path d="M 830 350 L 1190 350 L 1190 390" class="arr"/>
 <rect x="100" y="390" width="340" height="140" rx="14" fill="#dafbe1" stroke="#1a7f37" stroke-width="2"/>
-<text x="126" y="432" class="title" >active · 前 5 人</text>
-<text x="126" y="468" class="s" >判官 + 事件 + 归纳/晋升</text>
-<text x="126" y="498" class="s" >注入完整人物卡</text>
+<text x="126" y="428" class="title" >active · 前 5 人</text>
+<text x="126" y="462" class="s" >判官 + 事件 + 归纳/晋升</text>
+<text x="126" y="490" class="s" >注入完整人物卡</text>
 <rect x="520" y="390" width="340" height="140" rx="14" fill="#ddf4ff" stroke="#1f6feb" stroke-width="2"/>
-<text x="546" y="432" class="title" >buffer · 后 5 人</text>
-<text x="546" y="468" class="s" >判官 + 事件，不归纳</text>
-<text x="546" y="498" class="s" >晋升推迟，不建完整卡</text>
+<text x="546" y="428" class="title" >buffer · 后 5 人</text>
+<text x="546" y="462" class="s" >判官 + 事件，不归纳</text>
+<text x="546" y="490" class="s" >晋升推迟，不建完整卡</text>
 <rect x="940" y="390" width="340" height="140" rx="14" fill="#f6f8fa" stroke="#d0d7de" stroke-width="2"/>
-<text x="966" y="432" class="title" >其他 · 第 11 人起</text>
-<text x="966" y="468" class="s" >只进群氛围</text>
-<text x="966" y="498" class="s" >不建个人事件</text>
+<text x="966" y="428" class="title" >其他 · 第 11 人起</text>
+<text x="966" y="462" class="s" >只进群氛围</text>
+<text x="966" y="490" class="s" >不建个人事件</text>
 <path d="M 270 530 L 270 570" class="arr"/>
 <path d="M 690 530 L 690 570" class="arr"/>
 <path d="M 1190 530 L 1190 570" class="arr"/>
 <rect x="60" y="570" width="1360" height="120" rx="14" fill="#ddf4ff" stroke="#1f6feb" stroke-width="2"/>
-<text x="86" y="612" class="title" >群氛围归纳</text>
-<text x="86" y="648" class="s" >每 20 条有效消息，且间隔 ≥180 秒；只读最近 20 条</text>
-<text x="86" y="678" class="s" >输出：氛围 / 无人称事件 / 成员风格（均有字数上限）</text>
+<text x="86" y="608" class="title" >群氛围归纳</text>
+<text x="86" y="642" class="s" >每 20 条有效消息，且间隔 ≥180 秒；只读最近 20 条</text>
+<text x="86" y="670" class="s" >输出：氛围 / 无人称事件 / 成员风格（均有字数上限）</text>
 <path d="M 740 690 L 740 720" class="arr"/>
 <rect x="60" y="720" width="1360" height="90" rx="14" fill="#f6f8fa" stroke="#d0d7de" stroke-width="2"/>
-<text x="86" y="762" class="title" >群聊气泡（注入）</text>
-<text x="86" y="798" class="s" >最多 8 人 / 6 条事件；固定上限，与群人数无关</text>
+<text x="86" y="758" class="title" >群聊气泡（注入）</text>
+<text x="86" y="792" class="s" >最多 8 人 / 6 条事件；固定上限，与群人数无关</text>
 <text x="60" y="832" class="n" >事件去留：群事件活跃上限 20 条，溢出写 groups/&lt;id&gt;.archive.jsonl；个人事件活跃上限 400 条，归档可被 recall 检索。</text>
 <text x="60" y="858" class="n" >代价：buffer 不归纳、第 11 人起只进群氛围；没有 direct 信号时，插件无法判断普通群聊是否关键。</text>
 </svg>

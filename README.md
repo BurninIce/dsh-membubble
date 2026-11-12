@@ -14,7 +14,7 @@
 
 本仓库是 `dsh-membubble` 包自身，没有构建步骤。
 
-**状态**：0.1.1，开发者预览。验证环境 `@deepseek-ai/dsh 0.2.2-rc.1`、Node 24；67 项单元测试和 1 个集成 harness 通过；尚未发布到 npm。
+**状态**：0.1.2，开发者预览。验证环境 `@deepseek-ai/dsh 0.2.2-rc.1`、Node 24；67 项单元测试和 1 个集成 harness 通过；尚未发布到 npm。
 
 包名用 `dsh-membubble`，因为 npm 上的 `dsh-bubble` 已被一个无关的 macOS 悬浮气泡插件占用。工具、命令、服务 key 和数据目录统一用 `membubble`，搜索和运行时不留两套叫法。
 
@@ -77,7 +77,7 @@ Copy-Item .\lib, .\cordis.patch.yml, .\package.json, .\README.md, .\LICENSE $dst
 ```json
 {
   "dependencies": {
-    "dsh-membubble": "0.1.1"
+    "dsh-membubble": "0.1.2"
   },
   "dsh": {
     "profile": {

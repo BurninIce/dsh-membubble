@@ -21,39 +21,39 @@
   <text x="60" y="72" class="h" >三层记忆结构</text>
 <text x="60" y="108" class="sub" >分层是存储结构；注入时只展开当前说话人有权看到的部分。</text>
 <rect x="420" y="150" width="760" height="150" rx="14" fill="#ddf4ff" stroke="#1f6feb" stroke-width="2"/>
-<text x="446" y="192" class="title" >L0  群聊气泡</text>
-<text x="446" y="228" class="s" >群体氛围 · 无人称的近期事件 · 成员的名字与模糊风格</text>
-<text x="446" y="258" class="s" >不保存谁说了什么；已知成员名落盘前替换成「有人」</text>
+<text x="446" y="188" class="title" >L0  群聊气泡</text>
+<text x="446" y="222" class="s" >群体氛围 · 无人称的近期事件 · 成员的名字与模糊风格</text>
+<text x="446" y="250" class="s" >不保存谁说了什么；已知成员名落盘前替换成「有人」</text>
 <rect x="60" y="168" width="320" height="112" rx="14" fill="#f6f8fa" stroke="#d0d7de" stroke-width="2" stroke-dasharray="7 6"/>
-<text x="86" y="210" class="title" >群聊里所有人</text>
-<text x="86" y="246" class="s" >看到的是一层模糊印象</text>
+<text x="86" y="206" class="title" >群聊里所有人</text>
+<text x="86" y="240" class="s" >看到的是一层模糊印象</text>
 <rect x="1220" y="168" width="320" height="112" rx="14" fill="#f6f8fa" stroke="#d0d7de" stroke-width="2" stroke-dasharray="7 6"/>
-<text x="1246" y="210" class="title" >例外：group.buffer</text>
-<text x="1246" y="246" class="s" >待归纳的短期原文，成功即清空</text>
+<text x="1246" y="206" class="title" >例外：group.buffer</text>
+<text x="1246" y="240" class="s" >待归纳的短期原文，成功即清空</text>
 <path d="M 800 300 L 800 390" class="arr"/>
 <text x="824" y="335" class="b" >晋升判定</text>
 <text x="824" y="362" class="n" >事件 ≥ N + 判官 promote:true</text>
 <rect x="420" y="390" width="760" height="150" rx="14" fill="#fff8c5" stroke="#9a6700" stroke-width="2"/>
-<text x="446" y="432" class="title" >L1  人物气泡</text>
-<text x="446" y="468" class="s" >事件 · 事实 · 印象 · 自我披露 · 关系数值</text>
-<text x="446" y="498" class="s" >按人隔离；只有当前说话人的文件会被读取和渲染</text>
+<text x="446" y="428" class="title" >L1  人物气泡</text>
+<text x="446" y="462" class="s" >事件 · 事实 · 印象 · 自我披露 · 关系数值</text>
+<text x="446" y="490" class="s" >按人隔离；只有当前说话人的文件会被读取和渲染</text>
 <rect x="60" y="408" width="320" height="112" rx="14" fill="#f6f8fa" stroke="#d0d7de" stroke-width="2" stroke-dasharray="7 6"/>
-<text x="86" y="450" class="title" >只属于这个人</text>
-<text x="86" y="486" class="s" >A 的注入读不到 B 的卡片</text>
+<text x="86" y="446" class="title" >只属于这个人</text>
+<text x="86" y="480" class="s" >A 的注入读不到 B 的卡片</text>
 <rect x="1220" y="408" width="320" height="112" rx="14" fill="#f6f8fa" stroke="#d0d7de" stroke-width="2" stroke-dasharray="7 6"/>
-<text x="1246" y="450" class="title" >晋升是单向的</text>
-<text x="1246" y="486" class="s" >晋升后不会退回 L0</text>
+<text x="1246" y="446" class="title" >晋升是单向的</text>
+<text x="1246" y="480" class="s" >晋升后不会退回 L0</text>
 <path d="M 800 540 L 800 630" class="arr"/>
 <text x="824" y="575" class="b" >部署配置</text>
 <text x="824" y="602" class="n" >不在本插件管理范围</text>
 <rect x="420" y="630" width="760" height="110" rx="14" fill="#f6f8fa" stroke="#d0d7de" stroke-width="2"/>
-<text x="446" y="672" class="title" >L2  完整人物卡</text>
-<text x="446" y="708" class="s" >角色卡 / 人设层：由部署方的角色资产提供</text>
+<text x="446" y="668" class="title" >L2  完整人物卡</text>
+<text x="446" y="702" class="s" >角色卡 / 人设层：由部署方的角色资产提供</text>
 <rect x="60" y="648" width="320" height="110" rx="14" fill="#f6f8fa" stroke="#d0d7de" stroke-width="2" stroke-dasharray="7 6"/>
-<text x="86" y="690" class="title" >部署层</text>
-<text x="86" y="726" class="s" >角色卡 / 人设 / 资产</text>
+<text x="86" y="686" class="title" >部署层</text>
+<text x="86" y="720" class="s" >角色卡 / 人设 / 资产</text>
 <rect x="1220" y="648" width="320" height="110" rx="14" fill="#f6f8fa" stroke="#d0d7de" stroke-width="2" stroke-dasharray="7 6"/>
-<text x="1246" y="690" class="title" >不是聊天记录</text>
-<text x="1246" y="726" class="s" >只保留无人称事件</text>
+<text x="1246" y="686" class="title" >不是聊天记录</text>
+<text x="1246" y="720" class="s" >只保留无人称事件</text>
 <text x="60" y="832" class="n" >注：group.buffer 是待归纳的短期原文，属于明文例外；L0 的最终字段不保存言论。</text>
 </svg>

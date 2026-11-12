@@ -75,9 +75,9 @@ function text(x, y, value, cls = 'b', extra = '') {
 
 function card({ x, y, w, h, fill, stroke = C.border, title, lines = [], dash = false }) {
   const parts = [rect({ x, y, w, h, fill, stroke, dash })]
-  parts.push(text(x + 26, y + 42, title, 'title'))
+  parts.push(text(x + 26, y + 38, title, 'title'))
   lines.forEach((line, index) => {
-    parts.push(text(x + 26, y + 78 + index * 30, line, 's'))
+    parts.push(text(x + 26, y + 72 + index * 28, line, 's'))
   })
   return parts.join('\n')
 }
@@ -206,43 +206,43 @@ function footer(lines) {
   body.push(arrow('M 540 260 L 590 260'))
   body.push(arrow('M 820 260 L 870 260'))
   body.push(arrow('M 1080 260 L 1130 260'))
-  body.push(text(818, 184, '写事件', 'n'))
-  body.push(text(1082, 184, '每 N 条', 'n'))
+  body.push(text(850, 238, '写事件', 'n', 'text-anchor="middle"'))
+  body.push(text(1110, 238, '每N条', 'n', 'text-anchor="middle"'))
 
   // Branch row: y=420..530
   body.push(card({
-    x: 320, y: 420, w: 220, h: 110, fill: C.gray,
+    x: 320, y: 420, w: 220, h: 120, fill: C.gray,
     title: 'continue',
     lines: ['继续缓冲', '下一轮再判'],
   }))
   body.push(card({
-    x: 600, y: 420, w: 220, h: 110, fill: C.gray,
+    x: 600, y: 420, w: 220, h: 120, fill: C.gray,
     title: 'close · 不值得',
     lines: ['丢弃缓冲', '不写半成品事件'],
   }))
   body.push(card({
-    x: 880, y: 420, w: 200, h: 110, fill: C.pinkBg, stroke: C.pink,
+    x: 880, y: 420, w: 200, h: 120, fill: C.pinkBg, stroke: C.pink,
     title: '活跃 ≤ 400',
     lines: ['溢出的事件'],
   }))
   body.push(card({
-    x: 1140, y: 420, w: 240, h: 110, fill: C.pinkBg, stroke: C.pink,
+    x: 1140, y: 420, w: 240, h: 120, fill: C.pinkBg, stroke: C.pink,
     title: 'archive.jsonl',
     lines: ['append-only', 'recall 可检索'],
   }))
 
   // judge -> continue (left channel), then continue returns to pending bottom
-  body.push(arrow('M 600 292 L 570 292 L 570 475 L 540 475'))
+  body.push(arrow('M 600 292 L 570 292 L 570 480 L 540 480'))
   body.push(arrow('M 400 420 L 400 320'))
   // judge -> discard
-  body.push(arrow('M 710 320 L 710 410'))
+  body.push(arrow('M 710 320 L 710 420'))
   // event -> active -> archive
-  body.push(arrow('M 980 320 L 980 410'))
-  body.push(arrow('M 1080 475 L 1130 475'))
-  body.push(text(1092, 457, '归档', 'n'))
+  body.push(arrow('M 980 320 L 980 420'))
+  body.push(arrow('M 1080 480 L 1130 480'))
+  body.push(text(1110, 462, '归档', 'n', 'text-anchor="middle"'))
 
   body.push(card({
-    x: 60, y: 620, w: 1440, h: 120, fill: C.gray, dash: true,
+    x: 60, y: 620, w: 1440, h: 140, fill: C.gray, dash: true,
     title: '失败与队列边界',
     lines: ['判官失败：保留缓冲，下一轮再判；不写半成品事件。', '归档失败：保留在活跃列表；模型调用在后台队列，不阻塞回复。'],
   }))
