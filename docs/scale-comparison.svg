@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 500" role="img" aria-labelledby="title desc">
+  <title id="title">dsh-membubble 与全量注入、最近 20 条的注入 token 对比</title>
+  <desc id="desc">左图：个人对话 5000 轮；右图：1000 人群 2000 条消息。全量注入随轮次和群规模线性增长，最近 20 条固定但丢失旧事件，dsh-membubble 固定在 186/192 tokens。</desc>
+  <style>
+    text { font-family: system-ui, -apple-system, "Segoe UI", sans-serif; fill: #1f2328; }
+    .title { font-size: 15px; font-weight: 600; }
+    .legend { font-size: 12px; }
+    .tick { font-size: 11px; fill: #57606a; }
+    .axis-label { font-size: 12px; fill: #57606a; }
+    .value { font-size: 11px; font-weight: 600; }
+    .grid { stroke: #d8dee4; stroke-width: 1; }
+    .axis { stroke: #8c959f; stroke-width: 1; }
+    .foot { font-size: 11px; fill: #57606a; }
+  </style>
+  <rect width="1000" height="500" fill="#ffffff"/>
+  <text x="500" y="18" text-anchor="middle" class="title">注入文本估算 tokens（越低越好；对数刻度）</text>
+  <line x1="230" x2="256" y1="35" y2="35" stroke="#c0392b" stroke-width="2.5"/><text x="262" y="40" class="legend">全量注入</text>
+<line x1="420" x2="446" y1="35" y2="35" stroke="#d68910" stroke-width="2.5"/><text x="452" y="40" class="legend">最近 20 条</text>
+<line x1="610" x2="636" y1="35" y2="35" stroke="#1f6feb" stroke-width="2.5"/><text x="642" y="40" class="legend">dsh-membubble</text>
+  <text x="70" y="70" class="title">个人长跑：5000 轮</text>
+<line x1="70" x2="480" y1="376" y2="376" class="grid"/>
+<text x="62" y="380" class="tick" text-anchor="end">100</text>
+<line x1="70" x2="480" y1="306" y2="306" class="grid"/>
+<text x="62" y="310" class="tick" text-anchor="end">1,000</text>
+<line x1="70" x2="480" y1="236" y2="236" class="grid"/>
+<text x="62" y="240" class="tick" text-anchor="end">10,000</text>
+<line x1="70" x2="480" y1="166" y2="166" class="grid"/>
+<text x="62" y="170" class="tick" text-anchor="end">100,000</text>
+<line x1="70" x2="480" y1="96" y2="96" class="grid"/>
+<text x="62" y="100" class="tick" text-anchor="end">1,000,000</text>
+<line x1="70" x2="70" y1="96" y2="376" class="axis"/>
+<line x1="70" x2="480" y1="376" y2="376" class="axis"/>
+<text x="70" y="396" class="tick" text-anchor="middle">100</text>
+<text x="206.66666666666666" y="396" class="tick" text-anchor="middle">1000</text>
+<text x="343.3333333333333" y="396" class="tick" text-anchor="middle">3000</text>
+<text x="480" y="396" class="tick" text-anchor="middle">5000</text>
+<text x="275" y="420" class="axis-label" text-anchor="middle">对话轮次</text>
+<polyline points="70,265.76920914841486 206.66666666666666,195.37757071167735 343.3333333333333,161.68592596516774 480,146.09821982244011" fill="none" stroke="#c0392b" stroke-width="2.5"/>
+<circle cx="70" cy="265.76920914841486" r="3.5" fill="#c0392b"/>
+<circle cx="206.66666666666666" cy="195.37757071167735" r="3.5" fill="#c0392b"/>
+<circle cx="343.3333333333333" cy="161.68592596516774" r="3.5" fill="#c0392b"/>
+<circle cx="480" cy="146.09821982244011" r="3.5" fill="#c0392b"/>
+<text x="474" y="139.09821982244011" class="value" text-anchor="end" fill="#c0392b">192,447</text>
+<polyline points="70,314.62435166595094 206.66666666666666,314.22328234315836 343.3333333333333,313.86678897649847 480,313.86678897649847" fill="none" stroke="#d68910" stroke-width="2.5"/>
+<circle cx="70" cy="314.62435166595094" r="3.5" fill="#d68910"/>
+<circle cx="206.66666666666666" cy="314.22328234315836" r="3.5" fill="#d68910"/>
+<circle cx="343.3333333333333" cy="313.86678897649847" r="3.5" fill="#d68910"/>
+<circle cx="480" cy="313.86678897649847" r="3.5" fill="#d68910"/>
+<text x="474" y="306.86678897649847" class="value" text-anchor="end" fill="#d68910">772</text>
+<polyline points="70,357.29797901178904 206.66666666666666,357.13409390474584 343.3333333333333,357.13409390474584 480,357.13409390474584" fill="none" stroke="#1f6feb" stroke-width="2.5"/>
+<circle cx="70" cy="357.29797901178904" r="3.5" fill="#1f6feb"/>
+<circle cx="206.66666666666666" cy="357.13409390474584" r="3.5" fill="#1f6feb"/>
+<circle cx="343.3333333333333" cy="357.13409390474584" r="3.5" fill="#1f6feb"/>
+<circle cx="480" cy="357.13409390474584" r="3.5" fill="#1f6feb"/>
+<text x="474" y="350.13409390474584" class="value" text-anchor="end" fill="#1f6feb">186</text>
+  <text x="560" y="70" class="title">千人群：2000 条消息</text>
+<line x1="560" x2="970" y1="376" y2="376" class="grid"/>
+<text x="552" y="380" class="tick" text-anchor="end">100</text>
+<line x1="560" x2="970" y1="306" y2="306" class="grid"/>
+<text x="552" y="310" class="tick" text-anchor="end">1,000</text>
+<line x1="560" x2="970" y1="236" y2="236" class="grid"/>
+<text x="552" y="240" class="tick" text-anchor="end">10,000</text>
+<line x1="560" x2="970" y1="166" y2="166" class="grid"/>
+<text x="552" y="170" class="tick" text-anchor="end">100,000</text>
+<line x1="560" x2="970" y1="96" y2="96" class="grid"/>
+<text x="552" y="100" class="tick" text-anchor="end">1,000,000</text>
+<line x1="560" x2="560" y1="96" y2="376" class="axis"/>
+<line x1="560" x2="970" y1="376" y2="376" class="axis"/>
+<text x="560" y="396" class="tick" text-anchor="middle">500</text>
+<text x="765" y="396" class="tick" text-anchor="middle">1000</text>
+<text x="970" y="396" class="tick" text-anchor="middle">2000</text>
+<text x="765" y="420" class="axis-label" text-anchor="middle">群消息数（1000 人轮转）</text>
+<polyline points="560,222.76516934204733 765,201.66849157507863 970,180.4737987060435" fill="none" stroke="#c0392b" stroke-width="2.5"/>
+<circle cx="560" cy="222.76516934204733" r="3.5" fill="#c0392b"/>
+<circle cx="765" cy="201.66849157507863" r="3.5" fill="#c0392b"/>
+<circle cx="970" cy="180.4737987060435" r="3.5" fill="#c0392b"/>
+<text x="964" y="173.4737987060435" class="value" text-anchor="end" fill="#c0392b">62,120</text>
+<polyline points="560,317.3688093235142 765,317.3688093235142 970,317.14867357717355" fill="none" stroke="#d68910" stroke-width="2.5"/>
+<circle cx="560" cy="317.3688093235142" r="3.5" fill="#d68910"/>
+<circle cx="765" cy="317.3688093235142" r="3.5" fill="#d68910"/>
+<circle cx="970" cy="317.14867357717355" r="3.5" fill="#d68910"/>
+<text x="964" y="310.14867357717355" class="value" text-anchor="end" fill="#d68910">693</text>
+<polyline points="560,356.16891399075155 765,356.16891399075155 970,356.16891399075155" fill="none" stroke="#1f6feb" stroke-width="2.5"/>
+<circle cx="560" cy="356.16891399075155" r="3.5" fill="#1f6feb"/>
+<circle cx="765" cy="356.16891399075155" r="3.5" fill="#1f6feb"/>
+<circle cx="970" cy="356.16891399075155" r="3.5" fill="#1f6feb"/>
+<text x="964" y="349.16891399075155" class="value" text-anchor="end" fill="#1f6feb">192</text>
+  <text x="70" y="470" class="foot">全量 = 全部轮次/有效群消息；最近 20 = 最后 20 条；dsh-membubble = 实测注入（186 / 192 tokens）。</text>
+  <text x="70" y="488" class="foot">同一合成文本与保守 token 估算；全量注入在 5000 轮时约 192k tokens，已超过常见上下文窗口。</text>
+</svg>

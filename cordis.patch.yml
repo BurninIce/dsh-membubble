@@ -1,0 +1,13 @@
+# dsh-membubble bundle patch.
+#
+# One host row. Configure it by id in the profile's cordis.patch.yml:
+#
+#   - id: membubble
+#     config:
+#       namespace: demo
+#       agentName: 角色
+#       defaultSpeakerId: u_1001
+#       defaultSpeakerName: 阿川
+- insert:
+    - id: membubble
+      name: dsh-membubble

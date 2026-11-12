@@ -1,0 +1,65 @@
+{
+  "name": "dsh-membubble",
+  "version": "0.1.0",
+  "description": "Bounded-context memory for long-running dsh conversations and large group chats: fixed injection budget, focus-limited person pipelines, append-only event archives.",
+  "type": "module",
+  "license": "MIT",
+  "author": "BurninIce",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BurninIce/dsh-membubble.git"
+  },
+  "homepage": "https://github.com/BurninIce/dsh-membubble#readme",
+  "bugs": {
+    "url": "https://github.com/BurninIce/dsh-membubble/issues"
+  },
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE",
+    "docs/scale-comparison.svg",
+    "docs/diagrams/layers.svg",
+    "docs/diagrams/pipeline.svg",
+    "docs/diagrams/group-focus.svg",
+    "docs/screenshots/private-chat.png",
+    "docs/screenshots/group-chat.png"
+  ],
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "memory",
+    "membubble",
+    "bubble",
+    "roleplay",
+    "group-chat"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "engines": {
+    "node": ">=24",
+    "dsh": ">=0.2.2-rc.1 <0.3.0"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "~4.1.0",
+    "@deepseek-ai/dsh-tools": ">=0.2.2-rc.1 <0.3.0",
+    "@deepseek-ai/schemastery": "~3.19.0"
+  },
+  "scripts": {
+    "test": "node --test --test-isolation=none \"test/*.test.js\"",
+    "test:integration": "node --import ./tests/integration/register-dsh-packages.mjs ./tests/integration/membubble.mjs",
+    "test:scale": "node tests/scale/personal.mjs && node tests/scale/group.mjs && node tests/scale/chart.mjs",
+    "docs:build": "node tests/visual/build-diagrams.mjs && node tests/visual/chat-mock.mjs",
+    "check": "node --check lib/index.js"
+  }
+}
