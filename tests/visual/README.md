@@ -13,6 +13,8 @@ node tests/visual/build-diagrams.mjs
 - `docs/diagrams/layers.svg`
 - `docs/diagrams/pipeline.svg`
 - `docs/diagrams/group-focus.svg`
+- `docs/diagrams/identity.svg`
+- `docs/diagrams/promotion.svg`
 
 ## 模拟聊天截图
 

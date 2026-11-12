@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1600 900" role="img" aria-label="晋升：从 L0 群成员到 L1 人物气泡">
+  <title>晋升：从 L0 群成员到 L1 人物气泡</title>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#8c959f"/>
+    </marker>
+  </defs>
+  <style>
+    text { font-family: system-ui, -apple-system, "Segoe UI", "Noto Sans SC", "Microsoft YaHei", sans-serif; fill: #1f2328; }
+    .h { font-size: 38px; font-weight: 700; }
+    .sub { font-size: 19px; fill: #57606a; }
+    .title { font-size: 24px; font-weight: 700; }
+    .b { font-size: 20px; }
+    .s { font-size: 17px; fill: #57606a; }
+    .n { font-size: 15px; fill: #57606a; }
+    .arr { stroke: #8c959f; stroke-width: 2; fill: none; marker-end: url(#arrow); }
+    .dash { stroke: #8c959f; stroke-width: 2; fill: none; stroke-dasharray: 7 6; marker-end: url(#arrow); }
+  </style>
+  <rect width="1600" height="900" fill="#ffffff"/>
+  <text x="60" y="72" class="h" >晋升：从 L0 群成员到 L1 人物气泡</text>
+<text x="60" y="108" class="sub" >晋升是单向的；默认说话人直接是 L1，buffer 不触发晋升。</text>
+<rect x="80" y="220" width="340" height="160" rx="14" fill="#ddf4ff" stroke="#1f6feb" stroke-width="2"/>
+<text x="106" y="262" class="title" >L0  群成员</text>
+<text x="106" y="298" class="s" >名字 + 模糊风格</text>
+<text x="106" y="328" class="s" >promoted = false</text>
+<text x="106" y="358" class="s" >事件先作为晋升材料</text>
+<rect x="500" y="220" width="420" height="160" rx="14" fill="#fff8c5" stroke="#9a6700" stroke-width="2"/>
+<text x="526" y="262" class="title" >晋升判定</text>
+<text x="526" y="298" class="s" >仅 active 成员；buffer 不参与</text>
+<text x="526" y="328" class="s" >episodes ≥ promotionMinEpisodes（默认 3）</text>
+<text x="526" y="358" class="s" >判官必须输出 promote:true</text>
+<rect x="1000" y="220" width="360" height="160" rx="14" fill="#dafbe1" stroke="#1a7f37" stroke-width="2"/>
+<text x="1026" y="262" class="title" >L1  人物气泡</text>
+<text x="1026" y="298" class="s" >完整卡片 + 关系数值</text>
+<text x="1026" y="328" class="s" >注入 / recall 全部打开</text>
+<text x="1026" y="358" class="s" >promoted = true，记录 promotedAt</text>
+<path d="M 420 300 L 490 300" class="arr"/>
+<path d="M 920 300 L 990 300" class="arr"/>
+<text x="430" y="282" class="n" >累积事件</text>
+<text x="930" y="282" class="n" >通过</text>
+<path d="M 710 380 L 710 450" class="arr"/>
+<rect x="500" y="460" width="420" height="100" rx="14" fill="#f6f8fa" stroke="#d0d7de" stroke-width="2"/>
+<text x="526" y="502" class="title" >不通过 / 未达阈值</text>
+<text x="526" y="538" class="s" >保持 L0；下次事件闭合后再判</text>
+<text x="728" y="438" class="n" >否</text>
+<rect x="80" y="460" width="340" height="100" rx="14" fill="#f6f8fa" stroke="#d0d7de" stroke-width="2" stroke-dasharray="7 6"/>
+<text x="106" y="502" class="title" >默认说话人</text>
+<text x="106" y="538" class="s" >直接按 L1 处理</text>
+<rect x="1000" y="460" width="360" height="100" rx="14" fill="#f6f8fa" stroke="#d0d7de" stroke-width="2" stroke-dasharray="7 6"/>
+<text x="1026" y="502" class="title" >手动晋升</text>
+<text x="1026" y="538" class="s" >/membubble promote</text>
+<rect x="80" y="620" width="1280" height="100" rx="14" fill="#ffeff7" stroke="#bf3989" stroke-width="2"/>
+<text x="106" y="662" class="title" >晋升之后</text>
+<text x="106" y="698" class="s" >L0 保留，不会被清空；L1 独立归纳；promoted=true 后不降级。</text>
+<text x="60" y="832" class="n" >晋升不改写 L0 的无人称事件；它只是为该成员打开 L1 的完整卡片与关系数值。</text>
+<text x="60" y="858" class="n" >未晋升的群成员仍会记录事件，但注入和 recall 只给名字与最近互动时间。</text>
+</svg>

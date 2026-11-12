@@ -59,6 +59,15 @@ test('personal mode uses the private-chat header', () => {
   assert.match(text, /你正在和「你」说话/)
 })
 
+test('group block can exclude the current speaker to avoid duplicate style', () => {
+  const group = emptyGroup('g1', '测试群', 1)
+  touchMember(group, { id: 'u1', name: '阿川', style: '话多', promoted: true }, 1)
+  touchMember(group, { id: 'u2', name: '小林', style: '温和', promoted: true }, 1)
+  const text = renderGroup(group, config(), 'u1')
+  assert.doesNotMatch(text, /阿川/)
+  assert.match(text, /小林/)
+})
+
 test('renderContext combines group and person without other people facts', () => {
   const group = emptyGroup('g1', '测试群', 1)
   group.vibe = '活跃'
@@ -76,6 +85,7 @@ test('renderContext combines group and person without other people facts', () =>
   assert.match(text, /【群聊气泡】/)
   assert.match(text, /【人物气泡】关于「阿川」/)
   assert.match(text, /喜欢手冲咖啡/)
+  assert.ok(!text.includes('- 阿川：话多'), 'current speaker is not repeated in the group member list')
   // Other members appear only as fuzzy styles, never with their own facts.
   assert.ok(!text.includes('养猫'))
 })

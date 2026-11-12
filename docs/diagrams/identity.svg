@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1600 900" role="img" aria-label="同一个人：私聊和群聊只展开一份 L1">
+  <title>同一个人：私聊和群聊只展开一份 L1</title>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#8c959f"/>
+    </marker>
+  </defs>
+  <style>
+    text { font-family: system-ui, -apple-system, "Segoe UI", "Noto Sans SC", "Microsoft YaHei", sans-serif; fill: #1f2328; }
+    .h { font-size: 38px; font-weight: 700; }
+    .sub { font-size: 19px; fill: #57606a; }
+    .title { font-size: 24px; font-weight: 700; }
+    .b { font-size: 20px; }
+    .s { font-size: 17px; fill: #57606a; }
+    .n { font-size: 15px; fill: #57606a; }
+    .arr { stroke: #8c959f; stroke-width: 2; fill: none; marker-end: url(#arrow); }
+    .dash { stroke: #8c959f; stroke-width: 2; fill: none; stroke-dasharray: 7 6; marker-end: url(#arrow); }
+  </style>
+  <rect width="1600" height="900" fill="#ffffff"/>
+  <text x="60" y="72" class="h" >同一个人：私聊和群聊只展开一份 L1</text>
+<text x="60" y="108" class="sub" >一个 speakerId 对应一个 persons 文件；群聊额外展开 L0。</text>
+<rect x="80" y="170" width="360" height="140" rx="14" fill="#ddf4ff" stroke="#1f6feb" stroke-width="2"/>
+<text x="106" y="212" class="title" >私聊会话</text>
+<text x="106" y="248" class="s" >binding.mode = personal</text>
+<text x="106" y="278" class="s" >只渲染当前说话人的 L1</text>
+<rect x="1160" y="170" width="360" height="140" rx="14" fill="#fff8c5" stroke="#9a6700" stroke-width="2"/>
+<text x="1186" y="212" class="title" >群聊会话</text>
+<text x="1186" y="248" class="s" >binding.mode = group</text>
+<text x="1186" y="278" class="s" >渲染 L0 + 当前说话人的 L1</text>
+<rect x="620" y="360" width="360" height="190" rx="14" fill="#fbefff" stroke="#8250df" stroke-width="2"/>
+<text x="646" y="402" class="title" >L1  人物气泡</text>
+<text x="646" y="438" class="s" >persons/&lt;speakerId&gt;.json</text>
+<text x="646" y="468" class="s" >事件 / 事实 / 印象 / 关系</text>
+<text x="646" y="498" class="s" >同一份，不按聊天类型复制</text>
+<rect x="1160" y="390" width="360" height="170" rx="14" fill="#fff8c5" stroke="#9a6700" stroke-width="2"/>
+<text x="1186" y="432" class="title" >L0  群聊气泡</text>
+<text x="1186" y="468" class="s" >群氛围 + 无人称事件</text>
+<text x="1186" y="498" class="s" >其他人的名字与模糊风格</text>
+<text x="1186" y="528" class="s" >当前说话人已从「群里的人」移除</text>
+<path d="M 260 310 L 260 330 L 620 330 L 620 360" class="arr"/>
+<text x="292" y="322" class="n" >只渲染 L1</text>
+<path d="M 1340 310 L 1340 390" class="arr"/>
+<text x="1358" y="354" class="n" >L0</text>
+<path d="M 1160 240 L 1100 240 L 1100 455 L 980 455" class="arr"/>
+<text x="1000" y="447" class="n" >L1</text>
+<rect x="80" y="620" width="1440" height="90" rx="14" fill="#f6f8fa" stroke="#d0d7de" stroke-width="2" stroke-dasharray="7 6"/>
+<text x="106" y="662" class="title" >去重规则</text>
+<text x="106" y="698" class="s" >同一轮注入只会出现一个人物块；group.buffer 是短期原文，不是第二份卡片。</text>
+<text x="60" y="832" class="n" >私聊注入 = L1；群聊注入 = L0 + 当前说话人的 L1。speakerId 必须稳定：昵称变化不新建，id 变化会被当成两个人。</text>
+<text x="60" y="858" class="n" >如果同一人出现在多个群，L1 共享；各群 L0 分开。</text>
+</svg>

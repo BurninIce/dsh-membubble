@@ -34,6 +34,21 @@ test('archive files append and remain readable by entity', () => {
   }
 })
 
+test('ensurePerson promotes an existing unpromoted member when private chat opens their L1', () => {
+  const dir = tempDir()
+  try {
+    const store = new BubbleStore(dir)
+    const first = store.ensurePerson('u1', '小林', 1000, { promoted: false })
+    assert.equal(first.promoted, false)
+    const promoted = store.ensurePerson('u1', '小林', 2000, { promoted: true })
+    assert.equal(promoted.promoted, true)
+    assert.equal(promoted.promotedAt, 2000)
+    assert.equal(new BubbleStore(dir).readPerson('u1').promoted, true)
+  } finally {
+    fs.rmSync(dir, { recursive: true, force: true })
+  }
+})
+
 test('person documents persist across store instances', () => {
   const dir = tempDir()
   try {
